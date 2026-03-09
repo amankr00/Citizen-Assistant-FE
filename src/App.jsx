@@ -2,7 +2,8 @@ import { useState, useRef, useEffect } from 'react'
 import Markdown from 'react-markdown'
 import './App.css'
 
-const API_URL = process.env.API_URL
+const API_URL = import.meta.env.API_URL;
+console.log("Backend URL is:", API_URL);
 function App() {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
